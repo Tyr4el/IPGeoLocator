@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+venv/
 build/
 develop-eggs/
 dist/
@@ -56,3 +57,11 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# PyCharm Related:
+.idea*
+
+# Project Related:
+GeoLite2*
+config/config.ini
+

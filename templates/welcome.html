@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - IP Geo Locator Web-App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- CSS link for Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/welcome.css') }}">
+    <!-- CSS link for Brackets -->
+    <link rel="stylesheet" href="/static/css/welcome.css">
+    <link rel="icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <h1>Welcome</h1>
+            <p>By clicking "Agree", you agree to have your approximate location in the world tracked by your router's IP address. This information is not being collected or used in any manner. If you do not agree to these terms, either close this window or click "Decline"</p>
+            <p>This product includes GeoLite2 data created by MaxMind, available from
+                <a href="http://www.maxmind.com">http://www.maxmind.com</a>.</p>
+            <form action="/index" method="post">
+                <input class="btn btn-success btn-lg" type="submit" value="Agree">
+                <input class="btn btn-danger btn-lg" type="button" value="Decline" onclick="window.location.href = '/about'">
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
