@@ -3,45 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>IP Geo Locator Web-App</title>
+    <title>Welcome - IP Geo Locator Web-App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- CSS link for Flask -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
     <!-- CSS link for Brackets -->
-    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/about.css">
     <link rel="icon" href="/static/images/favicon.ico">
 </head>
 
 <body>
     <div class="container-fluid">
-        <main>
-            <p class="text-center">Google Map Location</p>
-            <br><br>
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">IP Address</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">City</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   {% for item in data %}
-                   <tr>
-                       <th scope="row">
-                           <td>{{ data.ip }}</td>
-                           <td>{{ data[0] }}</td>
-                           <td>{{ data[1] }}</td>
-                       </th>
-                   </tr>
-                   {% endfor %}
-                </tbody>
-            </table>
-        </main>
+        <div class="row align-items-center">
+            <div class="col">
+                <h1>About Me</h1>
+            </div>
+            <div class="col">
+                <p>Looks like you've declined to see this beautiful web app that I've created. To each their own, I guess.</p>
+                <p>But while I have you here, I might as well give you a little bit about myself.</p>
+                <p>I'm a student at the University of Central Florida studying Information Technology. I aim to become a Network Administrator/Engineer at some point in my life. I program in my spare time to keep my skills somewhat sharp and gain a little knowledge here and there. This project was the result of some of that down time.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Donate!</p>
+            </div>
+        </div>
     </div>
 </body>
 
